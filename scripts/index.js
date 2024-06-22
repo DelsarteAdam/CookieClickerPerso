@@ -200,6 +200,7 @@ function bonusProgreesBar() {
         progressBarBonus = false;
         progressBarHtml.style.backgroundColor = "";
         progressBarHtml.style.width = `1%`;
+        progressBarHtml.innerHTML = `0%`;
         progressBar = 0;
         updateMultiplicatorScore();
         clearInterval(bonusTimer2);
