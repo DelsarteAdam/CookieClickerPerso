@@ -64,6 +64,7 @@ function clickScore() {
 //auto clicker function
 function autoClicker() {
   totalScore += autoClickNumber * totalMultiplicateurBonus;
+  progressBarAdd();
 }
 
 //check able to buy
@@ -192,8 +193,8 @@ function bonusProgreesBar() {
     const bonusTimer2 = setInterval(function () {
       time300Bonus--;
       progressBar -= 3.3;
-
-      progressBarHtml.innerHTML = ``;
+      progressBarHtml.style.backgroundColor = "#ac851a";
+      progressBarHtml.innerHTML = `Bonus Time !`;
       progressBarHtml.style.width = `${progressBar}%`;
 
       if (time300Bonus === 0) {
