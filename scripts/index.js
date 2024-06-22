@@ -64,7 +64,9 @@ function clickScore() {
 //auto clicker function
 function autoClicker() {
   totalScore += autoClickNumber * totalMultiplicateurBonus;
-  progressBarAdd();
+  if (autoClickNumber != 0) {
+    progressBarAdd();
+  }
 }
 
 //check able to buy
