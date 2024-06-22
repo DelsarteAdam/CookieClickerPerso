@@ -1,0 +1,174 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&family=Titan+One&display=swap");
+
+$color1: #f1d746;
+$color2: #46e3f1;
+$color3: #3ecedb;
+
+@media (max-width: 1179px) {
+  body {
+    display: flex;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1180px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    aspect-ratio: 3/4;
+  }
+}
+
+* {
+  margin-top: 5px;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-family: "Sriracha", cursive;
+  color: #fff;
+  text-align: center;
+}
+
+body {
+  background-image: url(/pictures/istockphoto-1310996927-612x612.jpg);
+  background-repeat: repeat;
+  justify-content: center;
+}
+
+main {
+  background-color: #fff;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+
+#title {
+  background-color: $color1;
+  border-radius: 15px;
+  box-shadow: 0 9px $color2;
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+
+.scoreZone {
+  display: flex;
+  flex-direction: row;
+  img {
+    width: 50px;
+    aspect-ratio: 1/1;
+    position: absolute;
+  }
+  p {
+    background-color: $color1;
+    border-radius: 10px;
+    position: relative;
+
+    left: 70%;
+    width: 30%;
+    text-shadow: $color3 0 2px;
+    text-align: right;
+    font-size: 2rem;
+    padding-right: 10px;
+  }
+}
+
+#randomText {
+  background-color: $color3;
+  border-radius: 10px;
+  border: 1px solid $color2;
+}
+
+.imgCookie {
+  border-radius: 10px;
+  border: 2px solid $color1;
+  img {
+    padding: 5px;
+    width: 70%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.multiplicator {
+  display: flex;
+  flex-direction: row;
+  #bonusMultiplator {
+    width: 50%;
+    background-color: $color2;
+    border-radius: 10px;
+    border: 1px solid $color1;
+  }
+  #multiplicateurText {
+    width: 50%;
+    background-color: $color2;
+    border-radius: 10px;
+    border: 1px solid $color1;
+  }
+}
+
+button {
+  height: 10vh;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid $color3;
+  color: #fff;
+  background-color: $color2;
+
+  border-radius: 15px;
+  box-shadow: 0 9px $color1;
+  font-size: 2rem;
+  &:hover {
+    background-color: $color3;
+  }
+  &:active {
+    background-color: $color3;
+    box-shadow: 0 5px $color1;
+    transform: translateY(4px);
+  }
+  &:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+}
+
+#bonus1 {
+  z-index: 1;
+}
+
+#bonus2 {
+  z-index: 2;
+}
+
+#bonus3 {
+  z-index: 3;
+}
+
+.progressBar {
+  width: 1%;
+  height: 3vh;
+  width: 1%;
+  position: relative;
+  right: 1%;
+  background-color: $color1;
+  border-radius: 10px;
+  text-align: center;
+  align-content: center;
+}
