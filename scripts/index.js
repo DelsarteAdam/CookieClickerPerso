@@ -12,22 +12,12 @@ let cookieClick = document.getElementById("cookie");
 let bonus1 = document.getElementById("bonus1");
 let bonus2 = document.getElementById("bonus2");
 let bonus3 = document.getElementById("bonus3");
-let bonus4 = document.getElementById("bonus4");
 
 let bonus1Multiplicator = 2;
-let bonus2Multiplicator = 3;
-let bonus3Multiplicator = 4;
-let bonus4Multiplicator = 5;
 
 let bonus1Cost = 10;
 let bonus2Cost = 100;
 let bonus3Cost = 1000;
-let bonus4Cost = 10000;
-
-let bonus1Number = 0;
-let bonus2Number = 0;
-let bonus3Number = 0;
-let bonus4Number = 0;
 
 let arrBonus = [bonus1, bonus2, bonus3];
 let arrBonusCost = [bonus1Cost, bonus2Cost, bonus3Cost];
@@ -43,6 +33,8 @@ let progressBarBonus = false;
 let time300Bonus = 0;
 
 let randomTextHtml = document.getElementById("randomText");
+
+let quack = document.getElementById("quack");
 //update score
 
 function updateScore() {
@@ -59,6 +51,7 @@ function updateMultiplicatorScore() {
 function clickScore() {
   totalScore += 1 * totalMultiplicateurBonus;
   progressBarAdd();
+  quackSound();
 }
 
 //auto clicker function
@@ -223,6 +216,12 @@ function updateBonusHtml(numbers) {
 function randomText() {
   var randomTemp = Math.floor(Math.random() * 97);
   randomTextHtml.innerHTML = duckParagraphs[randomTemp];
+}
+
+//sound play
+
+function quackSound() {
+  quack.play();
 }
 
 //update able to click
