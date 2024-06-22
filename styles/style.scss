@@ -184,7 +184,7 @@ button {
 
   border-radius: 15px;
   box-shadow: 0 9px $color1;
-  font-size: 2rem;
+  font-size: clamp(16px, 5vw + 1rem, 35px);
   &:hover {
     background-color: $color3;
   }

@@ -161,7 +161,7 @@ button {
   background-color: #46e3f1;
   border-radius: 15px;
   box-shadow: 0 9px #f1d746;
-  font-size: 2rem;
+  font-size: clamp(16px, 5vw + 1rem, 35px);
 }
 button:hover {
   background-color: #3ecedb;
