@@ -35,6 +35,7 @@ let time300Bonus = 0;
 let randomTextHtml = document.getElementById("randomText");
 
 let quack = document.getElementById("quack");
+let park = document.getElementById("park");
 //update score
 
 function updateScore() {
@@ -224,6 +225,11 @@ function quackSound() {
   quack.play();
 }
 
+function parkSound() {
+  park.play();
+  park.volume = 0.3;
+}
+
 //update able to click
 
 window.setInterval(ableToBuy, 10);
@@ -245,3 +251,13 @@ window.setInterval(randomText, 10000);
 bonus1UpdateText();
 bonus2UpdateText();
 bonus3UpdateText();
+parkSound();
+
+park.addEventListener(
+  "ended",
+  function () {
+    this.currentTime = 0;
+    this.play();
+  },
+  false
+);
