@@ -116,6 +116,8 @@ main {
 }
 
 .imgCookie {
+  width: 70%;
+  margin: auto;
   border-radius: 10px;
   border: 2px solid #f1d746;
   background-image: url(../pictures/sunburst.svg);
@@ -152,7 +154,7 @@ main {
 }
 
 button {
-  height: 10vh;
+  height: 10%;
   display: inline-block;
   cursor: pointer;
   text-align: center;
@@ -161,7 +163,7 @@ button {
   background-color: #46e3f1;
   border-radius: 15px;
   box-shadow: 0 9px #f1d746;
-  font-size: clamp(16px, 5vw + 1rem, 35px);
+  font-size: clamp(8px, 5vw + 1rem, 35px);
 }
 button:hover {
   background-color: #3ecedb;
@@ -190,7 +192,7 @@ button:disabled {
 
 .progressBar {
   width: 1%;
-  height: 3vh;
+  height: 3%;
   width: 1%;
   position: relative;
   right: 1%;
